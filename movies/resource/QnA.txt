@@ -1,0 +1,64 @@
+<div class="container">
+    <br>
+    <h2>QnA</h2>
+    <p>If you have any qestion about our Cinema please search below </p>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Questions</th>
+
+                <th>Answers</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>How can I register?</td>
+                <td>You can sign up through 'login' above - 'Register' - and fill in the blank - 'Sumint'</td>
+            </tr>
+            <tr>
+                <td>How can I change my personal information?</td>
+                <td>You can change your password and profile picture through 'My Page' above - enter new password - 'Change Password'</td>
+            </tr>
+            <tr>
+                <td>How can I upload my picture?</td>
+                <td>You can upload your profile picture through 'My Page' above - 'Choose File' - select image file - 'Upload Image'</td>
+            </tr>
+            <tr>
+                <td>How can I reserve a movie?</td>
+                <td>First you need to log in, then click 'Movie Reservation' and follow the sequence</td>
+            </tr>
+            <tr>
+                <td>Can I reserve a movie without register?</td>
+                <td>Sorry, we only allow reservation with valid customer. Please sign up first! </td>
+            </tr>
+            <tr>
+                <td>How can I check my reservation?</td>
+                <td>You can check your reservation 'My Page' above - below [YOUR RESERVED MOVIE]</td>
+            </tr>
+            <tr>
+                <td>What is popularity on movie info?</td>
+                <td>Popularity is estimated value based on our calculating logic. The movie with higher popularity is likely to be nice</td>
+            </tr>
+            <tr>
+                <td>Can I make a reservation with credit card?</td>
+                <td>Yes. You can make it by both credit card and debit card</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <p>If you can't find what you want, e-mail us 'pajh0509@gmail.com'</p>
+    <p>Thank you for visiting. We will do our best!</p>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>

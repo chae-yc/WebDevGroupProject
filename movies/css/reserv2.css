@@ -1,0 +1,13 @@
+#screen{
+	background-color: gray;
+	letter-spacing: 6px;
+	font-size: 20px;
+	text-align: center;
+	width: 44%;
+}
+.seats{
+	margin: 7px;
+}
+.people{
+	margin: 7px;
+}
